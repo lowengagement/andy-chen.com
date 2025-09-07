@@ -5,38 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xiamen</title>
 <style>
-.gallery img { width:30%; cursor:pointer; }
-.overlay {
-  display:none;
-  position:fixed; top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.8);
-  z-index:9999;
-  justify-content: center;
-  align-items: center;
+.gallery img { 
+  width: 35%; 
+  cursor: pointer; 
 }
-.overlay img {
-  max-width:90%;
-  max-height:90%;
+
+input[type="checkbox"] { 
+  display: none; 
 }
-.overlay:target { display:flex; outline:none; }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+}
+
+.lightbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+}
+
+.close-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#cb1:checked ~ .lb1,
+#cb2:checked ~ .lb2,
+#cb3:checked ~ .lb3,
+#cb4:checked ~ .lb4 {
+  display: block;
+}
 </style>
 </head>
 <body>
-  
+
+<input type="checkbox" id="cb1">
+<input type="checkbox" id="cb2">
+<input type="checkbox" id="cb3">
+<input type="checkbox" id="cb4">
+
 <p class="gallery">
-  <a href="#lightbox1"><img src="../photos/xiamen/018b.jpeg" alt=""></a>
+  <label for="cb1"><img src="../photos/xiamen/018b.jpeg" alt=""></label>
   <br>
-  <a href="#lightbox2"><img src="../photos/xiamen/still-birds.jpeg" alt=""></a>
+  <label for="cb2"><img src="../photos/xiamen/still-birds.jpeg" alt=""></label>
   <br>
-  <a href="#lightbox3"><img src="../photos/xiamen/019d.jpg" alt=""></a>
+  <label for="cb3"><img src="../photos/xiamen/019d.jpg" alt=""></label>
   <br>
-  <a href="#lightbox4"><img src="../photos/xiamen/054.jpg" alt=""></a>
+  <label for="cb4"><img src="../photos/xiamen/054.jpg" alt=""></label>
 </p>
-<a href="#close" id="lightbox1" class="overlay"><img src="../photos/xiamen/018b.jpeg" alt=""></a>
-<a href="#close" id="lightbox2" class="overlay"><img src="../photos/xiamen/still-birds.jpeg" alt=""></a>
-<a href="#close" id="lightbox3" class="overlay"><img src="../photos/xiamen/019d.jpg" alt=""></a>
-<a href="#close" id="lightbox4" class="overlay"><img src="../photos/xiamen/054.jpg" alt=""></a>
+
+<div class="lightbox lb1">
+  <img src="../photos/xiamen/018b.jpeg" alt="">
+  <label for="cb1" class="close-overlay"></label>
+</div>
+
+<div class="lightbox lb2">
+  <img src="../photos/xiamen/still-birds.jpeg" alt="">
+  <label for="cb2" class="close-overlay"></label>
+</div>
+
+<div class="lightbox lb3">
+  <img src="../photos/xiamen/019d.jpg" alt="">
+  <label for="cb3" class="close-overlay"></label>
+</div>
+
+<div class="lightbox lb4">
+  <img src="../photos/xiamen/054.jpg" alt="">
+  <label for="cb4" class="close-overlay"></label>
+</div>
 
 <p>
   <a href="photo.html">Back</a>
