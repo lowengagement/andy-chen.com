@@ -9,39 +9,41 @@
   width: 35%; 
   cursor: pointer; 
 }
-
-input[type="checkbox"] {
-  display: none;
+input { 
+  display: none; 
 }
-
-.lightbox {
-  display: none;
-  position: fixed;
+.lightbox { 
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.8); 
+  z-index: 9999; 
+  justify-content: center; 
+  align-items: center;
+}
+.lightbox label {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
-
-.lightbox img {
-  max-width: 80vw;
+.lightbox img { 
+  max-width: 80vw; 
   max-height: 80vh;
-  width: auto;
-  height: auto;
-  cursor: default;
+  position: relative;
+  z-index: 1;
 }
-
-#cb1:checked ~ #lightbox1,
-#cb2:checked ~ #lightbox2,
-#cb3:checked ~ #lightbox3,
-#cb4:checked ~ #lightbox4,
-#cb5:checked ~ #lightbox5 {
-  display: flex;
+#cb1:checked ~ #lightbox1, 
+#cb2:checked ~ #lightbox2, 
+#cb3:checked ~ #lightbox3, 
+#cb4:checked ~ #lightbox4, 
+#cb5:checked ~ #lightbox5 { 
+  display: flex; 
 }
 </style>
 </head>
