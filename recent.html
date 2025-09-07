@@ -5,41 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recent</title>
 <style>
-.gallery img { width:35%; cursor:pointer; }
-.overlay {
-  display:none;
-  position:fixed; top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.8);
-  z-index:9999;
+.gallery img { 
+  width: 35%; 
+  cursor: pointer; 
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.overlay img {
-  max-width:90%;
-  max-height:90%;
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  cursor: default;
 }
-.overlay:target { display:flex; outline:none; }
+
+#cb1:checked ~ #lightbox1,
+#cb2:checked ~ #lightbox2,
+#cb3:checked ~ #lightbox3,
+#cb4:checked ~ #lightbox4,
+#cb5:checked ~ #lightbox5 {
+  display: flex;
+}
 </style>
 </head>
 <body>
-  
+
+<input type="checkbox" id="cb1">
+<input type="checkbox" id="cb2">
+<input type="checkbox" id="cb3">
+<input type="checkbox" id="cb4">
+<input type="checkbox" id="cb5">
+
 <p class="gallery">
-  <a href="#lightbox1"><img src="../photos/recent/0012.png" alt=""></a>
+  <label for="cb1"><img src="../photos/recent/0012.png" alt=""></label>
   <br>
-  <a href="#lightbox2"><img src="../photos/recent/0014.png" alt=""></a>
+  <label for="cb2"><img src="../photos/recent/0014.png" alt=""></label>
   <br>
-  <a href="#lightbox3"><img src="../photos/recent/0013.png" alt=""></a>
+  <label for="cb3"><img src="../photos/recent/0013.png" alt=""></label>
   <br>
-  <a href="#lightbox4"><img src="../photos/recent/0003.png" alt=""></a>
+  <label for="cb4"><img src="../photos/recent/0003.png" alt=""></label>
   <br>
-  <a href="#lightbox5"><img src="../photos/recent/0048.png" alt=""></a>
+  <label for="cb5"><img src="../photos/recent/0048.png" alt=""></label>
 </p>
-<a href="#close" id="lightbox1" class="overlay"><img src="../photos/recent/0012.png" alt=""></a>
-<a href="#close" id="lightbox2" class="overlay"><img src="../photos/recent/0014.png" alt=""></a>
-<a href="#close" id="lightbox3" class="overlay"><img src="../photos/recent/0013.png" alt=""></a>
-<a href="#close" id="lightbox4" class="overlay"><img src="../photos/recent/0003.png" alt=""></a>
-<a href="#close" id="lightbox5" class="overlay"><img src="../photos/recent/0048.png" alt=""></a>
+
+<div id="lightbox1" class="lightbox">
+  <label for="cb1">
+    <img src="../photos/recent/0012.png" alt="">
+  </label>
+</div>
+
+<div id="lightbox2" class="lightbox">
+  <label for="cb2">
+    <img src="../photos/recent/0014.png" alt="">
+  </label>
+</div>
+
+<div id="lightbox3" class="lightbox">
+  <label for="cb3">
+    <img src="../photos/recent/0013.png" alt="">
+  </label>
+</div>
+
+<div id="lightbox4" class="lightbox">
+  <label for="cb4">
+    <img src="../photos/recent/0003.png" alt="">
+  </label>
+</div>
+
+<div id="lightbox5" class="lightbox">
+  <label for="cb5">
+    <img src="../photos/recent/0048.png" alt="">
+  </label>
+</div>
 
 <p>
   <a href="photo.html">Back</a>
