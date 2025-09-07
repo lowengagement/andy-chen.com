@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xiamen</title>
+<style>
+.gallery img { width:30%; cursor:pointer; }
+.overlay {
+  display:none;
+  position:fixed; top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:9999;
+  justify-content: center;
+  align-items: center;
+}
+.overlay img {
+  max-width:90%;
+  max-height:90%;
+}
+.overlay:target { display:flex; outline:none; }
+</style>
+</head>
+<body>
+  
+<p class="gallery">
+  <a href="#lightbox1"><img src="../photos/xiamen/018b.jpeg" alt=""></a>
+  <br>
+  <a href="#lightbox2"><img src="../photos/xiamen/still-birds.jpeg" alt=""></a>
+  <br>
+  <a href="#lightbox3"><img src="../photos/xiamen/019d.jpg" alt=""></a>
+  <br>
+  <a href="#lightbox4"><img src="../photos/xiamen/054.jpg" alt=""></a>
+</p>
+<a href="#close" id="lightbox1" class="overlay"><img src="../photos/xiamen/018b.jpeg" alt=""></a>
+<a href="#close" id="lightbox2" class="overlay"><img src="../photos/xiamen/still-birds.jpeg" alt=""></a>
+<a href="#close" id="lightbox3" class="overlay"><img src="../photos/xiamen/019d.jpg" alt=""></a>
+<a href="#close" id="lightbox4" class="overlay"><img src="../photos/xiamen/054.jpg" alt=""></a>
+
+<p>
+  <a href="photo.html">Back</a>
+</p>
+
+</body>
+</html>

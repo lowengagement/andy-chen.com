@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Western Mass</title>
+<style>
+.gallery img { width:35%; cursor:pointer; }
+.overlay {
+  display:none;
+  position:fixed; top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:9999;
+  justify-content: center;
+  align-items: center;
+}
+.overlay img {
+  max-width:90%;
+  max-height:90%;
+}
+.overlay:target { display:flex; outline:none; }
+</style>
+</head>
+<body>
+
+<p class="gallery">
+  <a href="#lightbox1"><img src="../photos/western-mass/bench-noho.jpg" alt=""></a>
+  <br>
+  <a href="#lightbox2"><img src="../photos/western-mass/ethan-shower-2.jpg" alt=""></a>
+  <br>
+  <a href="#lightbox3"><img src="../photos/western-mass/graff-036.jpg" alt=""></a>
+  <br>
+  <a href="#lightbox4"><img src="../photos/western-mass/locker.jpg" alt=""></a>
+  <br>
+  <a href="#lightbox5"><img src="../photos/western-mass/072.jpg" alt=""></a>
+</p>
+<a href="#close" id="lightbox1" class="overlay"><img src="../photos/western-mass/bench-noho.jpg" alt=""></a>
+<a href="#close" id="lightbox2" class="overlay"><img src="../photos/western-mass/ethan-shower-2.jpg" alt=""></a>
+<a href="#close" id="lightbox3" class="overlay"><img src="../photos/western-mass/graff-036.jpg" alt=""></a>
+<a href="#close" id="lightbox4" class="overlay"><img src="../photos/western-mass/locker.jpg" alt=""></a>
+<a href="#close" id="lightbox5" class="overlay"><img src="../photos/western-mass/072.jpg" alt=""></a>
+
+<p>
+  <a href="photo.html">Back</a>
+</p>
+
+</body>
+</html>
