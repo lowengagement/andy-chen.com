@@ -9,9 +9,11 @@
   width: 35%; 
   cursor: pointer; 
 }
+
 input[type="checkbox"] {
   display: none;
 }
+
 .lightbox {
   display: none;
   position: fixed;
@@ -25,14 +27,15 @@ input[type="checkbox"] {
   align-items: center;
   cursor: pointer;
 }
+
 .lightbox img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80vw;
+  max-height: 80vh;
   width: auto;
   height: auto;
-  object-fit: contain;
   cursor: default;
 }
+
 #cb1:checked ~ #lightbox1,
 #cb2:checked ~ #lightbox2,
 #cb3:checked ~ #lightbox3,
