@@ -39,10 +39,6 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-#cb1:checked ~ .lb1,
-#cb2:checked ~ .lb2,
-#cb3:checked ~ .lb3,
-#cb4:checked ~ .lb4,
-#cb5:checked ~ .lb5 {
+.gallery-item input:checked + .lightbox {
   display: block;
 }
