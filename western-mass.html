@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Western Mass</title>
+<link rel="preload" href="assets/western-mass/bench-noho.jpg" as="image">
 <link rel="stylesheet" href="css/gallery.css">
 <style>
 .gallery img { width: 30%; }
@@ -12,15 +13,11 @@
 <body>
 
 <div class="gallery">
-    <img src="assets/western-mass/bench-noho.jpg" alt="">
-    <br>
-    <img src="assets/western-mass/ethan-shower-2.jpg" alt="">
-    <br>
-    <img src="assets/western-mass/graff-036.jpg" alt="">
-    <br>
-    <img src="assets/western-mass/locker.jpg" alt="">
-    <br>
-    <img src="assets/western-mass/072.jpg" alt="">
+    <img src="assets/western-mass/bench-noho.jpg" alt="" loading="eager" fetchpriority="high">
+    <img src="assets/western-mass/ethan-shower-2.jpg" alt="" loading="lazy">
+    <img src="assets/western-mass/graff-036.jpg" alt="" loading="lazy">
+    <img src="assets/western-mass/locker.jpg" alt="" loading="lazy">
+    <img src="assets/western-mass/072.jpg" alt="" loading="lazy">
 </div>
 
 <p><a href="photo.html">Back</a></p>
