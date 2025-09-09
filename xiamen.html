@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xiamen</title>
+<link rel="preload" href="assets/xiamen/018b.jpeg" as="image">
 <link rel="stylesheet" href="css/gallery.css">
 <style>
 .gallery img { width: 30%; }
@@ -12,13 +13,13 @@
 <body>
 
 <div class="gallery">
-    <img src="assets/xiamen/018b.jpeg" alt="">
+    <img src="assets/xiamen/018b.jpeg" alt="" loading="eager" fetchpriority="high">
     <br>
-    <img src="assets/xiamen/still-birds.jpeg" alt="">
+    <img src="assets/xiamen/still-birds.jpeg" alt="" loading="lazy">
     <br>
-    <img src="assets/xiamen/019d.jpg" alt="">
+    <img src="assets/xiamen/019d.jpg" alt="" loading="lazy">
     <br>
-    <img src="assets/xiamen/054.jpg" alt="">
+    <img src="assets/xiamen/054.jpg" alt="" loading="lazy">
 </div>
 
 <p><a href="photo.html">Back</a></p>
