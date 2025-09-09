@@ -1,32 +1,18 @@
-(function() {
-    function init() {
-        const lightbox = document.createElement('div');
-        lightbox.className = 'lightbox';
-        lightbox.innerHTML = '<img>';
-        document.body.appendChild(lightbox);
-        
-        const img = lightbox.querySelector('img');
-        
-        document.querySelectorAll('.gallery').forEach(gallery => {
-            gallery.addEventListener('click', e => {
-                if (e.target.tagName === 'IMG') {
-                    img.src = e.target.src;
-                    img.alt = e.target.alt;
-                    lightbox.style.display = 'block';
-                }
-            });
-        });
-        
-        lightbox.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
-        
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') lightbox.style.display = 'none';
-        });
+const l = document.createElement('div');
+l.className = 'lightbox';
+l.innerHTML = '<img>';
+document.body.appendChild(l);
+
+const i = l.firstElementChild;
+
+document.onclick = e => {
+    if (e.target.matches('.gallery img')) {
+        i.src = e.target.src;
+        i.alt = e.target.alt;
+        l.style.display = 'block';
+    } else if (e.target === l) {
+        l.style.display = 'none';
     }
-    
-    document.readyState === 'loading' 
-        ? document.addEventListener('DOMContentLoaded', init)
-        : init();
-})();
+};
+
+document.onkeydown = e => e.key === 'Escape' && (l.style.display = 'none');
