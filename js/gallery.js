@@ -1,5 +1,4 @@
 (function() {
-    (function() {
     function init() {
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
