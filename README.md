@@ -1,2 +1,2 @@
 # andychen.xyz
-better to be loved by some great wizard than to never love at all
+Better to be Loved by Some Great Wizard Than to Never Love at All.
