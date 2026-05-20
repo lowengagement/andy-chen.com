@@ -39,3 +39,9 @@ border:1px inset #808080
     width: auto;
     height: auto;
 }
+
+/* Mobile Image */
+img {
+    max-width: 100%;
+    height: auto;
+}
